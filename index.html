@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Notepads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.pinimg.com/originals/f2/d3/b2/f2d3b258a87a4a5757d64651e2abb3d7.gif') center center fixed;
+            background-size: cover;
+            text-align: center;
+        }
+        .notepad {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .notepad pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin: 0;
+            padding: 10px;
+            height: 80%;
+            overflow-y: auto;
+            background: none;
+            border: none;
+        }
+        .close-btn {
+            text-align: right;
+        }
+        .notepad img {
+            max-width: 50px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3 style="color: white;">With much love from your cowboy bestfriend and the fruitbasket</h3>
+
+<img src="https://cdn.discordapp.com/guilds/1328452267673911347/users/217330166622322698/avatars/25a7c3366d1c1fff5cbdbb81df909546.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Aura')" alt="Aura">
+<img src="https://cdn.discordapp.com/avatars/1324884491281498224/c3ca4317e8fb543b55984f1c0a0a180c.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Angel')" alt="Angel">
+<img src="https://cdn.discordapp.com/avatars/164332385981169664/6c69ec8b2b786cb7bfa32aaf9b70d84b.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Celtic')" alt="Celtic">
+<img src="https://cdn.discordapp.com/avatars/1275177553581052040/c282d2acd5490bc4d22876f1b4cf5eaf.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Amelia')" alt="Amelia">
+<img src="https://cdn.discordapp.com/avatars/558780387615309865/b7683077fa55b6dea8589a13745767c2.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('GK')" alt="GK">
+<img src="https://cdn.discordapp.com/avatars/1324975712540823592/7bc4b1b6583a5b85f4acd4564607591f.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Blazey')" alt="Blazey">
+<img src="https://cdn.discordapp.com/avatars/405827918221017088/01c4ececa2ac23b9d5d8e390425c78eb.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Gatto')" alt="Gatto">
+<img src="https://cdn.discordapp.com/avatars/1270582575886372907/d7adb7f14b1b53021caad94cffd85b29.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Jazzy')" alt="Jazzy">
+<img src="https://cdn.discordapp.com/avatars/1328504791743336519/115b158bd72fa7cdb94b19242dd2ca81.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Grapefruit')" alt="Grapefruit">
+<img src="https://cdn.discordapp.com/avatars/1320975655210450991/e23e8773192be4388bc617a2bbc41817.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Aimslut')" alt="Aimslut">
+<img src="https://cdn.discordapp.com/guilds/1328452267673911347/users/186108547489202176/avatars/fe35a225a245d59b402d012f9486da12.png?size=128&format=webp&quality=lossless&width=410&height=410" onclick="openNotepad('Poet')" alt="Poet">
+
+<div class="notepad" id="notepad">
+    <div class="close-btn">
+        <button onclick="closeNotepad()">Close</button>
+    </div>
+    <pre id="noteText"></pre>
+</div>
+
+<script>
+    function openNotepad(platform) {
+        const texts = {
+            "Aura": "Pommy, Pom, Pomiga, You say all you do is crash out and hurt people. But I know for a fact that is a lie. Just from the short time I’ve known you, you've helped so many people. Ellie & Maeve - Without you would Ellie have found out about Maeve? Maybe but you helped them sooner and helped them figure things out that they would have struggled with on their own. Angel - You’re her online mommy, the mother she deserved to have when she was little. Without you she would still be the scared little girl who was terrified when her mother was around. Ok_Parfait - I don’t know the details, but I do know she reached out to you about her problems. You could have turned her away, after all she isn't a fruity, but you didn’t. You talked with her and helped her out. These are all things a kind hearted, loving, wonderful person does. Not the evil pain dealing hatred emitting monster you think of yourself as. Then we get to me. How many times have I broken down to you because I’m afraid to lose everyone again? How many times did I come to you crying because I was afraid I was losing Angel? How long did I beg you to not leave me? Yes I’m still terrified I’ll fuck up and lose everyone, hell I’m crying right now, but you are always there for me just as I’m always there for you. We are best friends through and through. No we aren’t friends, we’re family now (And since you keep saying I’m the old one then I guess that makes me your older brother). Remember Pommy, me and you, we are ride or die from now until the end of time.",
+            "Angel": "Pommy is the greatest mommy ever she is so kind and caring I have told pommy everything about how I grew up and she has helped me by getting to seek therapy by opening up and telling people everything that happened to me after years of bottling everything up, She helped me understand that it wasn’t my fault I was not to blame pommy helped me understand, Pommy is amazing, Pommy made understand that everything that happened was not my fault she has supported me every step and with out pommy I would not have Arua as my boyfriend she has told Arua everything I went through and to be patient with me I owe pommy a lot more then a lot 😭, She was the one who has helped me get Arua as my boyfriend she told Arua what I went through 😭, I love pommy so much I have been through a lot and mommy pommy has helped me she was the one who helped me deal with everything with out mommy pommy I would not have Arua when I get mad and upset I I struggle and I’ve tried to break up with Arua it’s mommy pommy who helps me she makes sure Arua is ok and carms me down 😭😭, Mommy pommy is the one who got me and Arua together she helped me realize I wanted him as my boyfriend she spoke to him she was so happy when Arua told her he wanted to date me 😭😭😭, Mommy pommy has even spoken to my cousin to make sure Iam ok 😭😭, ",
+            "Celtic": "Well she's been a good friend in the short amount of time I've known her and made me laugh a lot",
+            "Amelia": "She’s super nice and caring and always makes sure limits aren’t pushed. And she helped me be more open and have more confidence",
+            "GK": "What I can say is how much I appreciate her, I am glad that she is understanding and kind, willing to be there for someone at least. Its unlikely for someone to forgive me online but Pommy sees I have some issues Im working on and allowed a second chance to be her friend",
+            "Blazey": "Here to mommy pommy who saved my life during one of the darkest times in my life after my toxic relationship ended I felt no one truly loved or cared about me as much as I cared for others I honestly fell into depression and even thought about taking my life a few times.. but I decided to join Reddit see if I could at least make one true friend and then I found you Mommy who treated me with such love and kindness that my depression slowly went away and I finally realized I matter ❤️",
+            "Gatto": "pommy you've been there for me since the moment we've met, I'll always be there for you if you need me, as you are my dear friend, you always make me smile even when I'm having a bad day, you make my day everytime I talk to you and i couldn't be happier that i met you, you are the shoulder I can lean when I'm not feeling great and your big heart is loved by everyone! love you lots",
+            "Jazzy": "She definitely has done a lot for me! And I hope you can express that in my behalf, but I’m not sure I have stories to share because while they exist, they are a bit too personal I believe",
+            "Grapefruit": "Ok! I think Mommy is a genuinely lovely person and a great friend who even in my short time knowing them has helped me grow and heal as a person. She’s never made me feel unwelcome or like a hinderance and actually really makes my day sometimes when I speak to her, not on a kink level I mean as a legitimate friend, great person who deserves the best. To meet someone whos so welcoming and supportive has really been an amazing experience and one that has made an actual positive influence on me im not as scared anymore and am actually comfortable with myself. So than you. Amazing person and I hope that we keep being friends!",
+            "Aimslut": "Mommy Pommy is such a unique and incredible person. Her strength, kindness, and ability to make everyone around her feel cared for and supported is truly remarkable. She’s always there to lend an ear or give a comforting quiz when it's needed most. I remember a time when I was feeling a little overwhelmed with a something i had upcoming, and Pommy swooped in like a beacon of calm and wisdom. With just a calm aura and a quiz (that i lost horribly at) she really helped me chill and get some much needed rest to prepare me for the next-ish day lol. She has an unwavering belief that things will get better for me and her encouragement gave me the confidence I needed to push through. She's truly one of a kind!",
+            "Poet": "I have never met someone who's so good at bringing out the parts that makes us feel gross about ourselves and make us love that and embrace it. As for how Pommy has helped me: Pommy helped me discover that Poetry helps me process my emotions. Sure it was meant as a reference to how wordy I am and how I overthink but the nickname made me wanna write a poem and that poem made me realize I was feeling a lot more underneath. Tons of my emotions have been spilt in my poems and they help me process that which previously just sat in my heart and ached. And now I feel way more confident and happy because of that."
+        };
+
+        document.getElementById('noteText').textContent = texts[platform] || "No content available.";
+        document.getElementById('notepad').style.display = "block";
+    }
+
+    function closeNotepad() {
+        document.getElementById('notepad').style.display = "none";
+    }
+</script>
+
+<img src="https://cdn.discordapp.com/attachments/743367570907856977/1342365757614461059/Pommy_logo.png?ex=67b95f08&is=67b80d88&hm=496c9688c67449e02e1908d5e79f1b3e73a9ecf5748e9650b3de8fac822e79e9&" alt="Description" style="display: block; margin: 20px auto; max-width: 100%; width: 700px; height: 700px;;">
+
+</body>
+</html>
